@@ -11,15 +11,15 @@
     <form method="POST" action="{{ route('zoos.store') }}">
         @csrf
         <p>Nombre</p>
-        <input type="text" value="" name="name">
+        <input type="text" value="" name="zoo[name]">
         <p>Ciudad</p>
-        <input type="text" value="" name="city">
+        <input type="text" value="" name="zoo[city]">
         <p>País</p>
-        <input type="text" value="" name="country">
+        <input type="text" value="" name="zoo[country]">
         <p>Tamaño</p>
-        <input type="text" value="" name="size">
+        <input type="text" value="" name="zoo[size]">
         <p>Presupuesto</p>
-        <input type="text" value="" name="budget">
+        <input type="text" value="" name="zoo[budget]">
         <input type="submit">
     </form>
 </body>
