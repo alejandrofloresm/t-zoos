@@ -22,20 +22,8 @@ class ZoosController extends Controller
     }
 
     function store(Request $req) {
-        $name = $req->input('zoo.name');
-        $city = $req->input('zoo.city');
-        $country = $req->input('zoo.country');
-        $size = $req->input('zoo.size');
-        $annual_budget = $req->input('zoo.budget');
-
-        Zoo::create([
-            'name' => $name,
-            'city' => $city,
-            'country' => $country,
-            'size' => $size,
-            'annual_budget' => $annual_budget,
-        ]);
-
+        $zoo = $req->input('zoo');
+        Zoo::create($zoo);
         return redirect()->route('zoos.index');
     }
 }

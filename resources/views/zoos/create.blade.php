@@ -19,7 +19,7 @@
         <p>Tamaño</p>
         <input type="text" value="" name="zoo[size]">
         <p>Presupuesto</p>
-        <input type="text" value="" name="zoo[budget]">
+        <input type="text" value="" name="zoo[annual_budget]">
         <input type="submit">
     </form>
 </body>
