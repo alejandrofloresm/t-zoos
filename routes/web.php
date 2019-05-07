@@ -21,5 +21,7 @@ Route::get('pruebas', 'RegistroController@pruebas');
 
 Route::get('zoos', 'ZoosController@index')->name('zoos.index');
 Route::get('zoos/create', 'ZoosController@create')->name('zoos.create');
+Route::get('zoos/{zoo}/edit', 'ZoosController@edit')->name('zoos.edit');
 Route::get('zoos/{zoo}', 'ZoosController@show')->name('zoos.show');
 Route::post('zoos', 'ZoosController@store')->name('zoos.store');
+Route::put('zoos/{zoo}', 'ZoosController@update')->name('zoos.update');

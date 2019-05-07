@@ -26,4 +26,18 @@ class ZoosController extends Controller
         Zoo::create($zoo);
         return redirect()->route('zoos.index');
     }
+
+    function edit(Request $req, Zoo $zoo) {
+        return view('zoos.edit', ['zoo' => $zoo]);
+    }
+
+    function update(Request $req, Zoo $zoo) {
+        $zoo->name = $req->input('zoo.name');
+        $zoo->city = $req->input('zoo.city');
+        $zoo->country = $req->input('zoo.country');
+        $zoo->size = $req->input('zoo.size');
+        $zoo->annual_budget = $req->input('zoo.annual_budget');
+        $zoo->save();
+        return redirect()->route('zoos.show', ['zoo' => $zoo]);
+    }
 }
