@@ -25,3 +25,4 @@ Route::get('zoos/{zoo}/edit', 'ZoosController@edit')->name('zoos.edit');
 Route::get('zoos/{zoo}', 'ZoosController@show')->name('zoos.show');
 Route::post('zoos', 'ZoosController@store')->name('zoos.store');
 Route::put('zoos/{zoo}', 'ZoosController@update')->name('zoos.update');
+Route::delete('zoos/{zoo}', 'ZoosController@delete')->name('zoos.delete');
