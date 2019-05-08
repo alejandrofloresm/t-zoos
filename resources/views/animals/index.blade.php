@@ -20,6 +20,7 @@
                 <th>Año de nacimiento</th>
                 <th>País</th>
                 <th>Continente</th>
+                <th>Especie</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -34,6 +35,7 @@
                     <td>{{ $item->birth_date }}</td>
                     <td>{{ $item->country }}</td>
                     <td>{{ $item->continent }}</td>
+                    <td>{{ $item->species->vulgar_name }}</td>
                     <td>
                     </td>
                 </tr>

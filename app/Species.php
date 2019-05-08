@@ -14,4 +14,8 @@ class Species extends Model
     protected $fillable = [
         'vulgar_name', 'scientific_name', 'family', 'is_on_danger'
     ];
+
+    public function animals() {
+        return $this->hasMany('App\Animal');
+    }
 }

@@ -14,4 +14,8 @@ class Animal extends Model
     protected $fillable = [
         'id_number', 'genre', 'birth_year', 'country', 'continent', 'species_id'
     ];
+
+    public function species() {
+        return $this->belongsTo('App\Species');
+    }
 }
