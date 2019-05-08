@@ -20,6 +20,8 @@ Route::get('registro', 'RegistroController@index');
 Route::get('pruebas', 'RegistroController@pruebas');
 
 Route::get('animals', 'AnimalsController@index')->name('animals.index');
+Route::get('animals/create', 'AnimalsController@create')->name('animals.create');
+Route::post('animals', 'AnimalsController@store')->name('animals.store');
 
 Route::get('zoos', 'ZoosController@index')->name('zoos.index');
 Route::get('zoos/create', 'ZoosController@create')->name('zoos.create');

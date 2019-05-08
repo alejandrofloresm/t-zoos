@@ -13,4 +13,13 @@ class AnimalsController extends Controller
         return view('animals.index', ['animals' => $animals]);
     }
 
+    function create(Request $req) {
+        return view('animals.create');
+    }
+
+    function store(Request $req) {
+        $animal = $req->input('animals');
+        Animal::create($animal);
+        return redirect()->route('animals.index');
+    }
 }

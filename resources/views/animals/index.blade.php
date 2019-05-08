@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1>Animales</h1>
+    <a href="{{ route('animals.create') }}">
+        Crear un nuevo animal
+    </a>
     <table>
         <thead>
             <tr>
