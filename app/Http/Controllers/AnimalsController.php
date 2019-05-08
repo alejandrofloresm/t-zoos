@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Animal;
+use App\Species;
 
 class AnimalsController extends Controller
 {
@@ -14,7 +15,8 @@ class AnimalsController extends Controller
     }
 
     function create(Request $req) {
-        return view('animals.create');
+        $species = Species::all();
+        return view('animals.create', ['species' => $species]);
     }
 
     function store(Request $req) {

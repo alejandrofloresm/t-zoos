@@ -12,6 +12,6 @@ class Animal extends Model
      * @var array
      */
     protected $fillable = [
-        'id_number', 'genre', 'birth_date', 'country', 'continent', 'species_id'
+        'id_number', 'genre', 'birth_year', 'country', 'continent', 'species_id'
     ];
 }

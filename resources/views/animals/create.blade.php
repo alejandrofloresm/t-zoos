@@ -20,6 +20,12 @@
         <input type="text" value="" name="animals[country]">
         <p>Continente</p>
         <input type="text" value="" name="animals[continent]">
+        <p>Especie</p>
+        <select name="animals[species_id]">
+            @foreach($species as $item)
+                <option value="{{ $item->id }}">{{$item->vulgar_name}}</option>
+            @endforeach
+        </select>
         <input type="submit">
     </form>
 </body>
