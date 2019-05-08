@@ -26,3 +26,11 @@ Route::get('zoos/{zoo}', 'ZoosController@show')->name('zoos.show');
 Route::post('zoos', 'ZoosController@store')->name('zoos.store');
 Route::put('zoos/{zoo}', 'ZoosController@update')->name('zoos.update');
 Route::delete('zoos/{zoo}', 'ZoosController@delete')->name('zoos.delete');
+
+Route::get('species', 'SpeciesController@index')->name('species.index');
+Route::get('species/create', 'SpeciesController@create')->name('species.create');
+Route::get('species/{species}/edit', 'SpeciesController@edit')->name('species.edit');
+Route::get('species/{species}', 'SpeciesController@show')->name('species.show');
+Route::post('species', 'SpeciesController@store')->name('species.store');
+Route::put('species/{species}', 'SpeciesController@update')->name('species.update');
+Route::delete('species/{species}', 'SpeciesController@delete')->name('species.delete');
