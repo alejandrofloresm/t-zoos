@@ -17,6 +17,10 @@ class SpeciesZoosController extends Controller
 
     public function update(Request $req, Zoo $zoo) {
         $sp = $req->input('species');
-        dd($sp);
+        // Relaciona el zoológico
+        // con las especies indicadas
+        // en la variable $sp
+        $zoo->species()->attach($sp);
+        return redirect()->route('zoos.show', ['zoo' => $zoo]);
     }
 }

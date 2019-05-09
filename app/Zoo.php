@@ -14,4 +14,12 @@ class Zoo extends Model
     protected $fillable = [
         'name', 'city', 'country', 'size', 'annual_budget'
     ];
+
+    /**
+     * The species that belong to the zoo.
+     */
+    public function species()
+    {
+        return $this->belongsToMany('App\Species');
+    }
 }
