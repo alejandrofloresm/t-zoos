@@ -45,6 +45,9 @@
                             {{ method_field('DELETE') }}
                             <input type="submit" value="Eliminar">
                         </form>
+                        <a href="{{ route('zoos.species.edit', ['zoo' => $zoo]) }}">
+                            Modificar especies
+                        </a>
                     </td>
                 </tr>
             @endforeach
